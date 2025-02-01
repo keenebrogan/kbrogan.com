@@ -1,0 +1,15 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../img/quad-desktop.jpg') no-repeat center center/cover;
+}
+
+/* Navbar Customization */
+.navbar {
+    opacity: 0.9;
+}
