@@ -8,14 +8,26 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('../img/quad-desktop.jpg') no-repeat center center/cover;
+    background: url('../img/quad-desktop.jpg') repeat center center/cover;
 }
 
 /* Navbar Customization */
 .navbar {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 html {
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
   }
+
+section {
+    min-height: 25vh;
+    padding: 25px 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}

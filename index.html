@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keene Brogan (Home)</title>
+    <title>Keene Brogan</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -28,7 +28,7 @@
     </script>
 
     <!-- Hero Section -->
-    <header class="hero text-center text-white d-flex align-items-center justify-content-center">
+    <section id="home" class="hero text-center text-white d-flex align-items-center justify-content-center">
         <div class="container">
             <h1>Welcome! I'm Keene </h1>
             <p class="lead">I'm a Computer Science student at Georgia Tech, with a specialization in AI and Human-Computer Interaction.
@@ -42,7 +42,85 @@
             </p>
             <!-- <a href="projects.html" class="btn btn-primary btn-lg">See My Projects</a> -->
         </div>
-    </header>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+        <h2 class="text-center mb-4">My Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="/assets/img/ltr.png" class="card-img-top" alt="Learning to Rank">
+                    <div class="card-body">
+                        <h5 class="card-title">Learning to Rank</h5>
+                        <p class="card-text">
+                            This Learning to Rank (LTR) project optimized NAPA Auto Parts'
+                             search results by ranking products based on user interactions 
+                             like clicks and purchases. Using Google BigQuery and an XGBoost
+                              model on Vertex AI, it improved ranking accuracy by 20% and is 
+                              expected to boost revenue by 30%. The system enhances search 
+                              relevance and customer experience, driving higher conversions. 🚀
+                        </p>
+                        <a href="/pages/ltr.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="assets/img/project2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">ML Spam Detection</h5>
+                        <p class="card-text">
+                            This project built spam detection models using Naive Bayes,
+                             SVM, and Random Forest, achieving 98% accuracy on a 5,000-email dataset. 
+                             Hyperparameter tuning improved precision to 100%, making the models highly effective.</p>
+                        <a href="pages/spam_detection.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <!-- <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/project3.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Three</h5>
+                        <p class="card-text">Coming soon!</p>
+                        <a href="/pages/project3.html" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5 text-center">
+        <h2 class="mb-4">Contact Me</h2>
+        <p>You can find me on the following platforms:</p>
+        <div class="d-flex justify-content-center">
+            <ul class="list-unstyled">
+                <li class="my-3">
+                    <a href="mailto:kbrogan@gmail.com" class="text-dark text-decoration-none d-flex align-items-center">
+                        <i class="fas fa-envelope fa-2x me-2 text-primary"></i>
+                        <span>Email Me</span>
+                    </a>
+                </li>
+                <li class="my-3">
+                    <a href="https://www.linkedin.com/in/keenebrogan" target="_blank" class="text-dark text-decoration-none d-flex align-items-center">
+                        <i class="fab fa-linkedin fa-2x me-2 text-primary"></i>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                </li>
+                <li class="my-3">
+                    <a href="https://github.com/keenebrogan" target="_blank" class="text-dark text-decoration-none d-flex align-items-center">
+                        <i class="fab fa-github fa-2x me-2 text-dark"></i>
+                        <span>GitHub: keenebrogan</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-center text-white py-3">
