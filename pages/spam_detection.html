@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detection Project</title>
+    
+    <!-- Bootstrap & Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/assets/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+    <header class="hero bg-success text-white text-center py-5">
+        <div class="container">
+            <h1>Spam Detection with Machine Learning</h1>
+            <p class="lead">Building intelligent filters to detect spam emails with high accuracy</p>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Project Overview</h2>
+                <p>
+                    The Spam Detection project aimed to build a highly accurate machine learning classifier to distinguish spam emails from legitimate messages. Using a dataset of 5,000 labeled emails, the project compared three different models: Bernoulli Naïve Bayes, Support Vector Machine (SVM), and Random Forest. The emails were processed using TF-IDF vectorization, which converted text into numerical representations based on word frequency and importance. Each model was trained and evaluated using key classification metrics like precision, recall, and F1-score, ensuring robustness in identifying spam emails while minimizing false positives.
+                </p>
+                <p>
+                    On the right, we can see the word count of different words in spam vs ham (not spam) messages. This shows the differences in the construction of each kind of message, and how we are able to exploit those differences by training a machine learning model.
+                </p>
+                <p>
+                    One of the biggest challenges was hyperparameter tuning to maximize model performance. The Bernoulli Naive Bayes classifier initially had a recall score of 79.9%, but through optimization, it improved to 93.5%, significantly reducing missed spam emails. The SVM model achieved the highest precision (97.3%), while the Random Forest model reached 100% precision but struggled slightly with recall. The final ensemble model combined insights from all three approaches, leading to 98% overall accuracy. Future improvements involve leveraging deep learning techniques such as Recurrent Neural Networks (RNNs) or Transformers (BERT) to further enhance spam classification accuracy in real-world applications.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="/assets/img/spam_vs_ham.png" class="img-fluid rounded shadow" alt="Spam Detection Model">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
