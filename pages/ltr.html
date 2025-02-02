@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning to Rank Project</title>
+    
+    <!-- Bootstrap & Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div id="navbar-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("/assets/navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Learning to Rank for E-Commerce</h1>
+            <p class="lead">Optimizing search results to enhance user experience and revenue.</p>
+        </div>
+    </header>
+
+    <!-- Project Content -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/assets/img/ltr_project.jpg" class="img-fluid rounded shadow" alt="Learning to Rank">
+            </div>
+            <div class="col-md-6">
+                <h2>Project Overview</h2>
+                <p>
+                    This Learning to Rank (LTR) project optimized search rankings for NAPA Auto Parts' e-commerce platform, ensuring customers find the most relevant products at the top of their search results. The project involved training a machine learning model that ranks products based on historical user interactions, such as clicks, add-to-carts, and purchases. By leveraging Google Cloud Vertex AI and XGBoost ranking algorithms, the system was able to learn customer preferences and dynamically adjust search rankings. The model was trained on millions of search queries spanning a 90-day period, capturing patterns in user behavior and improving product relevance.
+
+                </p>
+                <p>
+                    A key technical challenge was data preprocessing and feature engineering, where raw search logs needed to be transformed into a structured dataset for training the ranking model. This required extensive SQL queries in Google BigQuery to extract user interactions and assign relevance scores to products. Once the data pipeline was built, the LTR model was fine-tuned using hyperparameter optimization, leading to an NDCG (Normalized Discounted Cumulative Gain) improvement of 20%. The solution was integrated with Flask, Java Spring Boot, and React, ensuring seamless deployment into the existing NAPA Auto Parts search infrastructure. This ranking enhancement is projected to drive a 30% increase in revenue, significantly improving the e-commerce experience for customers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
